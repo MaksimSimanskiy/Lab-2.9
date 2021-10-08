@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 def find_max(seq, max_so_far):
     if not seq:
         return max_so_far
