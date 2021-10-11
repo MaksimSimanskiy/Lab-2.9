@@ -60,6 +60,7 @@ def fib(n):
         return fib(n - 2) + fib(n - 1)
 '''
 
+
 if __name__ == '__main__':
     print('Результат рекурсивного факториала:', timeit.timeit(setup=code1, number=1000))
     print('Результат рекурсивного числа Фибоначи:', timeit.timeit(setup=code2, number=1000))
