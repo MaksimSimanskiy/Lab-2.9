@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 import timeit
+
+
 code1 = '''
 def factorial(n, acc=1):
     if n == 0:
