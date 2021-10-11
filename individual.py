@@ -17,5 +17,6 @@ def all_var(arr):
         return r
 
 
-n = int(input("Введите число "))
-print(all_var([i for i in range(1, n + 1)]))
+if __name__ == '__main__':
+    n = int(input("Введите число "))
+    print(all_var([i for i in range(1, n + 1)]))

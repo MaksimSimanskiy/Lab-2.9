@@ -20,7 +20,7 @@ def fib(n):
 '''
 print('Результат рекурсивного факториала:', timeit.timeit(setup = code1, number = 1000))
 print('Результат рекурсивного числа Фибоначи:', timeit.timeit(setup = code2, number = 1000))
-code3 ='''
+code3 = '''
 def factorial(n):
     product = 1
     while n > 1:
@@ -38,7 +38,7 @@ def fib(n):
 '''
 print('Результат итеративного факториала:', timeit.timeit(setup = code3, number = 1000))
 print('Результат итеративного числа Фибоначи:', timeit.timeit(setup = code4, number = 1000))
-code5 ='''
+code5 = '''
 from functools import lru_cache
 @lru_cache
 def factorial(n):
