@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 import timeit
+
+
 code1 = '''
 def factorial(n):
     if n == 0:
@@ -18,8 +22,6 @@ def fib(n):
     else:
         return fib(n - 2) + fib(n - 1)
 '''
-print('Результат рекурсивного факториала:', timeit.timeit(setup = code1, number = 1000))
-print('Результат рекурсивного числа Фибоначи:', timeit.timeit(setup = code2, number = 1000))
 code3 = '''
 def factorial(n):
     product = 1
@@ -36,8 +38,6 @@ def fib(n):
         n -= 1
     return a
 '''
-print('Результат итеративного факториала:', timeit.timeit(setup = code3, number = 1000))
-print('Результат итеративного числа Фибоначи:', timeit.timeit(setup = code4, number = 1000))
 code5 = '''
 from functools import lru_cache
 @lru_cache
@@ -59,5 +59,11 @@ def fib(n):
     else:
         return fib(n - 2) + fib(n - 1)
 '''
-print('Результат факториала с декоратором:', timeit.timeit(setup = code5, number = 1000))
-print('Результат числа Фибоначи с декоратором:', timeit.timeit(setup = code6, number = 1000))
+
+if __name__ == '__main__':
+    print('Результат рекурсивного факториала:', timeit.timeit(setup=code1, number=1000))
+    print('Результат рекурсивного числа Фибоначи:', timeit.timeit(setup=code2, number=1000))
+    print('Результат итеративного факториала:', timeit.timeit(setup=code3, number=1000))
+    print('Результат итеративного числа Фибоначи:', timeit.timeit(setup=code4, number=1000))
+    print('Результат факториала с декоратором:', timeit.timeit(setup=code5, number=1000))
+    print('Результат числа Фибоначи с декоратором:', timeit.timeit(setup=code6, number=1000))
